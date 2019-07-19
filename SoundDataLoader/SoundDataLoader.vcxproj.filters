@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="audio">
+      <UniqueIdentifier>{9436575e-7fc4-452f-8d57-09a73b0c2d01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{61309431-7778-410e-bb75-263681bfff95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application">
+      <UniqueIdentifier>{a3191437-188c-47d4-a70b-f49134f2a6f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="file">
+      <UniqueIdentifier>{90fd5366-3987-4f78-9b98-5cfb42a30eef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Files.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="RiffParser.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundData.h">
+      <Filter>audio</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Exceptions.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Files.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="RiffParser.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundData.cpp">
+      <Filter>audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
