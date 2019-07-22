@@ -18,10 +18,10 @@
 class Exception : public std::runtime_error
 {
 	public:
-	Exception();
-	Exception(const std::string &what);
-	virtual ~Exception();
-	virtual const char *name() const noexcept;
+		Exception();
+		Exception(const std::string &what);
+		virtual ~Exception();
+		virtual const char *name() const noexcept;
 };
 
 //********************************************************************************
@@ -31,10 +31,10 @@ class Exception : public std::runtime_error
 class InvalidArgumentException : public Exception
 {
 	public:
-	InvalidArgumentException();
-	InvalidArgumentException(const std::string &what);
-	~InvalidArgumentException() override;
-	const char *name() const noexcept override;
+		InvalidArgumentException();
+		InvalidArgumentException(const std::string &what);
+		~InvalidArgumentException() override;
+		const char *name() const noexcept override;
 };
 
 //********************************************************************************
@@ -44,10 +44,10 @@ class InvalidArgumentException : public Exception
 class InvalidCallException : public Exception
 {
 	public:
-	InvalidCallException();
-	InvalidCallException(const std::string &what);
-	~InvalidCallException() override;
-	const char *name() const noexcept override;
+		InvalidCallException();
+		InvalidCallException(const std::string &what);
+		~InvalidCallException() override;
+		const char *name() const noexcept override;
 };
 
 //********************************************************************************
@@ -57,10 +57,10 @@ class InvalidCallException : public Exception
 class NullPointerException : public Exception
 {
 	public:
-	NullPointerException();
-	NullPointerException(const std::string &what);
-	~NullPointerException() override;
-	const char *name() const noexcept override;
+		NullPointerException();
+		NullPointerException(const std::string &what);
+		~NullPointerException() override;
+		const char *name() const noexcept override;
 };
 
 //********************************************************************************
@@ -70,10 +70,10 @@ class NullPointerException : public Exception
 class OutOfBoundsException : public Exception
 {
 	public:
-	OutOfBoundsException();
-	OutOfBoundsException(const std::string &what);
-	~OutOfBoundsException() override;
-	const char *name() const noexcept override;
+		OutOfBoundsException();
+		OutOfBoundsException(const std::string &what);
+		~OutOfBoundsException() override;
+		const char *name() const noexcept override;
 };
 
 //********************************************************************************
@@ -83,10 +83,10 @@ class OutOfBoundsException : public Exception
 class InvalidDataException : public Exception
 {
 	public:
-	InvalidDataException();
-	InvalidDataException(const std::string &what);
-	~InvalidDataException() override;
-	const char *name() const noexcept override;
+		InvalidDataException();
+		InvalidDataException(const std::string &what);
+		~InvalidDataException() override;
+		const char *name() const noexcept override;
 };
 
 //********************************************************************************
@@ -96,10 +96,10 @@ class InvalidDataException : public Exception
 class RequestFailureException : public Exception
 {
 	public:
-	RequestFailureException();
-	RequestFailureException(const std::string &what);
-	~RequestFailureException() override;
-	const char *name() const noexcept override;
+		RequestFailureException();
+		RequestFailureException(const std::string &what);
+		~RequestFailureException() override;
+		const char *name() const noexcept override;
 };
 
 //********************************************************************************
@@ -109,10 +109,10 @@ class RequestFailureException : public Exception
 class ResourceFailureException : public Exception
 {
 	public:
-	ResourceFailureException();
-	ResourceFailureException(const std::string &what);
-	~ResourceFailureException() override;
-	const char *name() const noexcept override;
+		ResourceFailureException();
+		ResourceFailureException(const std::string &what);
+		~ResourceFailureException() override;
+		const char *name() const noexcept override;
 };
 
 //********************************************************************************
@@ -122,10 +122,10 @@ class ResourceFailureException : public Exception
 class UnsupportedException : public Exception
 {
 	public:
-	UnsupportedException();
-	UnsupportedException(const std::string &what);
-	~UnsupportedException() override;
-	const char *name() const noexcept override;
+		UnsupportedException();
+		UnsupportedException(const std::string &what);
+		~UnsupportedException() override;
+		const char *name() const noexcept override;
 };
 
 #endif
