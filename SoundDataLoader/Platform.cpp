@@ -14,9 +14,9 @@
 /*
 Swap bytes in 16 bit unsigned value.
 */
-utype16 byteSwap16(utype16 value)
+std::uint16_t byteSwap16(std::uint16_t value)
 {
-	utype16 result = 0;
+	std::uint16_t result = 0;
 
 	result = result | (value & 0x00FF) << 8;
 	result = result | (value & 0xFF00) >> 8;
@@ -27,9 +27,9 @@ utype16 byteSwap16(utype16 value)
 /*
 Swap bytes in 32 bit unsigned value.
 */
-utype32 byteSwap32(utype32 value)
+std::uint32_t byteSwap32(std::uint32_t value)
 {
-	utype32 result = 0;
+	std::uint32_t result = 0;
 
 	result = result | (value & 0x000000FF) << 24;
 	result = result | (value & 0x0000FF00) << 8;
@@ -42,9 +42,9 @@ utype32 byteSwap32(utype32 value)
 /*
 Swap bytes in 64 bit unsigned value.
 */
-utype64 byteSwap64(utype64 value)
+std::uint64_t byteSwap64(std::uint64_t value)
 {
-	utype64 result = 0;
+	std::uint64_t result = 0;
 
 	result = result | (value & 0x00000000000000FF) << 56;
 	result = result | (value & 0x000000000000FF00) << 40;

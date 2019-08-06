@@ -27,7 +27,7 @@ int main()
 		SoundData sound("bgm.wav");
 
 		std::cout << "Format data size:   " << sound.getFormatDataSize() << std::endl;
-		std::cout << "Format data:        " << sound.getDataSize() << std::endl;
+		std::cout << "Data size:          " << sound.getDataSize() << std::endl;
 		std::cout << "Packet count:       " << sound.getPacketCount() << std::endl;
 		std::cout << "Samples per second: " << sound.getSamplesPerSecond() << std::endl;
 		std::cout << "Bytes per second:   " << sound.getAverageBytesPerSecond() << std::endl;

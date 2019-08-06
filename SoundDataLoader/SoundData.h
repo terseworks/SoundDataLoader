@@ -25,22 +25,22 @@ class SoundData
 		SoundData &operator=(const SoundData &rhs) = delete;
 		SoundData &operator=(SoundData &&rhs) = delete;
 		const void *getFormatData() const;
-		utype32 getFormatDataSize() const;
-		const utype8 *getData() const;
-		utype32 getDataSize() const;
-		const utype32 *getPacketData() const;
-		utype32 getPacketCount() const;
-		utype32 getSamplesPerSecond() const;
-		utype32 getAverageBytesPerSecond() const;
-		utype16 getChannelCount() const;
-		utype16 getBlockAlignment() const;
-		utype16 getBitsPerSample() const;
+		std::uint32_t getFormatDataSize() const;
+		const std::uint8_t *getData() const;
+		std::uint32_t getDataSize() const;
+		const std::uint32_t *getPacketData() const;
+		std::uint32_t getPacketCount() const;
+		std::uint32_t getSamplesPerSecond() const;
+		std::uint32_t getAverageBytesPerSecond() const;
+		std::uint16_t getChannelCount() const;
+		std::uint16_t getBlockAlignment() const;
+		std::uint16_t getBitsPerSample() const;
 
 	private:
-		std::unique_ptr<utype8[]> formatData, data;
-		std::unique_ptr<utype32[]> packetData;
-		utype32 formatDataSize, dataSize, packetCount, samplesPerSecond, averageBytesPerSecond;
-		utype16 channelCount, blockAlignment, bitsPerSample;
+		std::unique_ptr<std::uint8_t[]> formatData, data;
+		std::unique_ptr<std::uint32_t[]> packetData;
+		std::uint32_t formatDataSize, dataSize, packetCount, samplesPerSecond, averageBytesPerSecond;
+		std::uint16_t channelCount, blockAlignment, bitsPerSample;
 };
 
 #endif

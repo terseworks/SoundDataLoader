@@ -25,7 +25,7 @@ SoundData::SoundData(const std::string &fileName) : formatDataSize(0), dataSize(
 	bool foundFmt = false;
 	bool foundData = false;
 	bool foundDpds = false;
-	utype32 fileType = 0;
+	std::uint32_t fileType = 0;
 
 	ReadableFile soundFile(fileName);
 	RiffParser riffParser(soundFile);
@@ -61,7 +61,7 @@ SoundData::SoundData(const std::string &fileName) : formatDataSize(0), dataSize(
 				case sizeof(PCMWAVEFORMAT):
 				case sizeof(WAVEFORMATEX):
 				case sizeof(WAVEFORMATEXTENSIBLE):
-					formatData.reset(new utype8[chunk.dataSize]);
+					formatData.reset(new std::uint8_t[chunk.dataSize]);
 					formatDataSize = chunk.dataSize;
 					soundFile.setOffset(chunk.dataOffset);
 					soundFile.read(formatData.get(), chunk.dataSize);
@@ -165,7 +165,7 @@ SoundData::SoundData(const std::string &fileName) : formatDataSize(0), dataSize(
 			foundData = true;
 			if (!chunk.dataSize) throw InvalidDataException("Chunk data has 0 size.");
 
-			data.reset(new utype8[chunk.dataSize]);
+			data.reset(new std::uint8_t[chunk.dataSize]);
 			dataSize = chunk.dataSize;
 			soundFile.setOffset(chunk.dataOffset);
 			soundFile.read(data.get(), chunk.dataSize);
@@ -177,14 +177,14 @@ SoundData::SoundData(const std::string &fileName) : formatDataSize(0), dataSize(
 			packetCount = chunk.dataSize / 4;
 			if (!packetCount) throw InvalidDataException("Chunk packet count is 0.");
 
-			packetData.reset(new utype32[packetCount]);
+			packetData.reset(new std::uint32_t[packetCount]);
 			soundFile.setOffset(chunk.dataOffset);
 			soundFile.read(packetData.get(), chunk.dataSize);
 			if (IS_BIG_ENDIAN)
 			{
-				for (utype32 i = 0; i < packetCount; i++)
+				for (std::uint32_t i = 0; i < packetCount; i++)
 				{
-					utype32 packet = packetData[i];
+					std::uint32_t packet = packetData[i];
 					packetData[i] = byteSwap32(packet);
 				}
 			}
@@ -222,7 +222,7 @@ const void *SoundData::getFormatData() const
 /*
 Get the format data size in bytes.
 */
-utype32 SoundData::getFormatDataSize() const
+std::uint32_t SoundData::getFormatDataSize() const
 {
 	return formatDataSize;
 }
@@ -230,7 +230,7 @@ utype32 SoundData::getFormatDataSize() const
 /*
 Get a constant pointer to the data.
 */
-const utype8 *SoundData::getData() const
+const std::uint8_t *SoundData::getData() const
 {
 	return data.get();
 }
@@ -238,7 +238,7 @@ const utype8 *SoundData::getData() const
 /*
 Get the data size in bytes.
 */
-utype32 SoundData::getDataSize() const
+std::uint32_t SoundData::getDataSize() const
 {
 	return dataSize;
 }
@@ -247,7 +247,7 @@ utype32 SoundData::getDataSize() const
 Get a constant pointer to the packet data.
 May be null if not in XWMA format.
 */
-const utype32 *SoundData::getPacketData() const
+const std::uint32_t *SoundData::getPacketData() const
 {
 	return packetData.get();
 }
@@ -256,7 +256,7 @@ const utype32 *SoundData::getPacketData() const
 Get the packet count.
 May be 0 if not in XWMA format.
 */
-utype32 SoundData::getPacketCount() const
+std::uint32_t SoundData::getPacketCount() const
 {
 	return packetCount;
 }
@@ -264,7 +264,7 @@ utype32 SoundData::getPacketCount() const
 /*
 Get the number of samples per second.
 */
-utype32 SoundData::getSamplesPerSecond() const
+std::uint32_t SoundData::getSamplesPerSecond() const
 {
 	return samplesPerSecond;
 }
@@ -272,7 +272,7 @@ utype32 SoundData::getSamplesPerSecond() const
 /*
 Get the average bytes played per second.
 */
-utype32 SoundData::getAverageBytesPerSecond() const
+std::uint32_t SoundData::getAverageBytesPerSecond() const
 {
 	return averageBytesPerSecond;
 }
@@ -281,7 +281,7 @@ utype32 SoundData::getAverageBytesPerSecond() const
 Get the number of channels.
 1 channel for mono, 2 for stereo.
 */
-utype16 SoundData::getChannelCount() const
+std::uint16_t SoundData::getChannelCount() const
 {
 	return channelCount;
 }
@@ -290,7 +290,7 @@ utype16 SoundData::getChannelCount() const
 Get the block alignment in bytes.
 The data size is evenly divisible by this value.
 */
-utype16 SoundData::getBlockAlignment() const
+std::uint16_t SoundData::getBlockAlignment() const
 {
 	return blockAlignment;
 }
@@ -299,7 +299,7 @@ utype16 SoundData::getBlockAlignment() const
 Get the number of bits per sample.
 May be 0 for some compressed formats.
 */
-utype16 SoundData::getBitsPerSample() const
+std::uint16_t SoundData::getBitsPerSample() const
 {
 	return bitsPerSample;
 }

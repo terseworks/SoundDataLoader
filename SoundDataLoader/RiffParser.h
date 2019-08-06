@@ -22,7 +22,7 @@ struct RiffChunk
 	char name[4];
 	char type[4];
 	std::size_t dataOffset;
-	utype32 dataSize;
+	std::uint32_t dataSize;
 };
 
 //********************************************************************************
