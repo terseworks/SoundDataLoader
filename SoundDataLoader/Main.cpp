@@ -1,12 +1,12 @@
 //********************************************************************************
 // Main.cpp
 //
+// (C) 2019 TerseWorks. All rights reserved.
+// TerseWorks Public Code License (https://www.terseworks.com/licensing).
+//
 // Written by: John Meschke
 // Description: Main program entry point.
-//
-// Linker Input Additional Dependencies:
-//   [Windows]
-//   xaudio2.lib
+// Dependencies: Windows, xaudio2.lib
 //********************************************************************************
 
 #include "Common.h"

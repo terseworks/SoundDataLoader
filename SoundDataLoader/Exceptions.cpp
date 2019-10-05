@@ -1,6 +1,9 @@
 //********************************************************************************
 // Exceptions.cpp
 //
+// (C) 2019 TerseWorks. All rights reserved.
+// TerseWorks Public Code License (https://www.terseworks.com/licensing).
+//
 // Written by: John Meschke
 // Description: Exception classes.
 //********************************************************************************
