@@ -2,7 +2,7 @@
 // RiffParser.cpp
 //
 // (C) 2019 TerseWorks. All rights reserved.
-// TerseWorks Public Code License (https://www.terseworks.com/licensing).
+// TerseWorks Public Code License | https://www.terseworks.com/licensing
 //
 // Written by: John Meschke
 // Description: Parses a RIFF file into managable parts.
@@ -70,10 +70,10 @@ RiffParser::RiffParser(const ReadableFile &riffFile)
 			chunks.push_back(chunk);
 		}
 	}
-	catch (const Exception &exception)
+	catch (const Exception &)
 	{
 		riffFile.setOffset(originalOffset);
-		throw exception;
+		throw;
 	}
 
 	riffFile.setOffset(originalOffset);

@@ -2,7 +2,7 @@
 // RiffParser.h
 //
 // (C) 2019 TerseWorks. All rights reserved.
-// TerseWorks Public Code License (https://www.terseworks.com/licensing).
+// TerseWorks Public Code License | https://www.terseworks.com/licensing
 //
 // Written by: John Meschke
 // Description: Parses a RIFF file into managable parts.

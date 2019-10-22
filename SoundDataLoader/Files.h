@@ -2,7 +2,7 @@
 // Files.h
 //
 // (C) 2019 TerseWorks. All rights reserved.
-// TerseWorks Public Code License (https://www.terseworks.com/licensing).
+// TerseWorks Public Code License | https://www.terseworks.com/licensing
 //
 // Written by: John Meschke
 // Description: Utilities to read and write the contents of a file on the system.
